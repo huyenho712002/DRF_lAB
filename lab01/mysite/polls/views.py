@@ -3,11 +3,13 @@ from click import Choice
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
-from django.views import generic  # Đảm bảo import từ django.views.generic
+from django.views import generic
+from regex import F  # Đảm bảo import từ django.views.generic
 
 
 from polls.models import Question
 from django.utils import timezone
+
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
