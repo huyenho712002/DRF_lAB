@@ -27,3 +27,7 @@ class Store(models.Model):
 class Item(models.Model):
     name = models.CharField(max_length=10)
     data = models.IntegerField()
+
+class Person(models.Model):
+    # ...
+    people = models.Manager()
